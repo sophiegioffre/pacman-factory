@@ -1,13 +1,21 @@
-# pacman-factory
-Factory for making pacmen
+# PacMan Factory Exercise
 
-# DESCRIPTION
+## DESCRIPTION
 When button "make one" is pressed you need to complete the code 
 to position the new pacman image and add it to the "game" div. It is then added to the array of pacmen, which keeps track of the position and velocity of each pacman.
 You also need to make each pacman bounce off any wall it hits. 
 Start by getting at least one pacman positioned and viewable. 
 
-# LICENCE
+## HOW TO RUN
+Clone all files in this repo to your local drive. Then open the index.html file in a browser, perferibly Google Chrome. First, click the "Add PacMan" button at least once. Each click of this button adds a new, randomly generated PacMan to the page. Then, click the "Start Game" button and the PacMen will begin to move at different velocities. You may continue to "Add PacMen" after starting the game. 
+
+## ROAD MAP TO FUTURE IMRPOVEMENTS
+I plan to improve this project in the following ways:
+-Fix the bug that messes with the opening and closing of the PacMen mouths
+-Change the background to look like the original PacMan game styling
+-Change the styling of the buttons to look like vintage video game styling
+
+## LICENCE
 MIT License
 
 Copyright (c) 2020 John Williams
