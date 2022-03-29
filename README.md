@@ -11,8 +11,11 @@ Clone all files in this repo to your local drive. Then open the index.html file 
 
 ## ROAD MAP TO FUTURE IMRPOVEMENTS
 I plan to improve this project in the following ways:
+<br>
 -Fix the bug that messes with the opening and closing of the PacMen mouths
+<br>
 -Change the background to look like the original PacMan game styling
+<br>
 -Change the styling of the buttons to look like vintage video game styling
 
 ## LICENCE
