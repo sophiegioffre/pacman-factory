@@ -52,17 +52,7 @@ function makeOne() {
 
 
 //Callback function for edge detection and direction adjustment
-function checkCollisions(item) {
-  /*
-  if (item.position.x + item.velocity.x + item.newimg.width > window.innerWidth || item.position.x + item.velocity.x < 0) {
-    item.velocity.x = -item.velocity.x;
-  }
-  if (item.position.y + item.velocity.y + item.newimg.height > window.innerHeight || item.position.y + item.velocity.y < 0) {
-    item.velocity.y = -item.velocity.y;
-  }
-  */
-  
-  
+function checkCollisions(item) {  
   if (item.position.x + item.velocity.x + item.newimg.width > window.innerWidth) {
     item.velocity.x = -item.velocity.x;
     item.direction = 1;
@@ -80,17 +70,10 @@ function checkCollisions(item) {
 }
 
 
-//Callback function to make PacMen mouths open and close
-function moveMouth (item) {
-  setInterval(() => {item.focus = (item.focus + 1) % 2; return item.focus}), 500;
-}
-
-
 //Function to make pacmen move onclick of Start Game button
 function update() {
   //Loop over pacmen array and move each one and move image in DOM
   pacMen.forEach((item) => {
-    moveMouth(item);
     checkCollisions(item);
     item.position.x += item.velocity.x;
     item.position.y += item.velocity.y;
@@ -98,9 +81,12 @@ function update() {
     item.newimg.style.left = item.position.x;
     item.newimg.style.top = item.position.y;
 
+    //This line makes the mouths open and close
+    item.focus = (item.focus + 1) % 2;
+
     item.newimg.src =  pacArray[item.direction][item.focus];
   });
-  setTimeout(update, 20);
+  setTimeout(update, 80);
 }
 
 
